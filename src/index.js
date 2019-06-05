@@ -15,4 +15,6 @@ app.use(morgan('dev'))
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/api/v1', routes.movie)
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(port, '0.0.0.0', function () {
+    console.log('App listening on port ' + port + ' !');
+});
