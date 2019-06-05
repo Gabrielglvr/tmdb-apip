@@ -21,7 +21,7 @@ The application is separated by modules, this approach made easy to change from 
 > $ docker build -t tmdb/api .
 > $ docker run -d -p 5000:5000 tmdb/api
 
-## ​ ​ Third-party​ ​ Libraries
+# ​ ​ Third-party​ ​ Libraries
 
  - [axios](https://github.com/axios/axios)  - Promise based HTTP client for the browser and node.js
  - [cors](https://github.com/expressjs/cors) to enable cors in api
