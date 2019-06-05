@@ -53,6 +53,128 @@
             "description": "Page from list",
             "required": false,
             "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "language",
+            "description": "Data language",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/response"
+              }
+            }
+          },
+          "304": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/response"
+              }
+            }
+          },
+          "400": {
+            "description": "Cannot get data"
+          },
+          "500": {
+            "description": "Error when processing request"
+          }
+        }
+      }
+    },
+    "/movie/upcoming": {
+      "get": {
+        "tags": [
+          "movie"
+        ],
+        "summary": "Find a movie by name",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Page from list",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "language",
+            "description": "Data language",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/response"
+              }
+            }
+          },
+          "304": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/response"
+              }
+            }
+          },
+          "400": {
+            "description": "Cannot get data"
+          },
+          "500": {
+            "description": "Error when processing request"
+          }
+        }
+      }
+    },
+    "/movie/{id}": {
+      "get": {
+        "tags": [
+          "movie"
+        ],
+        "summary": "Find a movie by name",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Page from list",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Page from list",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "language",
+            "description": "Data language",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
