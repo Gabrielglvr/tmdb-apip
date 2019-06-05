@@ -9,7 +9,6 @@ function movie(req, res) {
         let language = req.query.language ?  req.query.language : 'en-US'
 
         let url = uri.format(key, language, title, page)
-        console.log(url)
 
         axios.get(url).then(result => {
 

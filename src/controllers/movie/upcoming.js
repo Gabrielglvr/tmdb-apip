@@ -9,8 +9,6 @@ function upcoming(req, res) {
 
         let url = uri.format(language, page, key)
 
-        console.log(url)
-
         axios.get(url).then((result) => {
 
             if(result.errors) {
